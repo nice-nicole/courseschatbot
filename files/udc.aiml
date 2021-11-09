@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <category>
+    <pattern>*</pattern>
+    <template>I have no answer for that.</template>
+  </category>
+  <category>
+      <pattern>HELLO *</pattern>
+      <template>
+        <random>
+            <li>Hello! What is your name?</li>
+            <li>Hi! welcome to this chat, What is your name?</li>
+        </random>
+      </template>
+  </category>
+  <category>
+      <pattern>My name is * *</pattern>
+      <template>Nice to meet you <set name="firstname"><star/></set> ! Do you want to take some coding courses?</template>
+  </category>
+    <category>
+      <pattern>Yes</pattern>
+      <template> Great <get name="firstname"><star/></get>
+          <!--<condition></condition>-->
+      </template>
+  </category>
+  
+  
+</aiml>
